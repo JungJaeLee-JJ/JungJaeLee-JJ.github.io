@@ -1,0 +1,353 @@
+
+html {
+    height: 100%;
+}
+body {
+    font-family: 'Jua', sans-serif;
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+iframe {
+    max-width: calc(100vw - 32px);
+}
+
+img {
+    max-width: calc(100vw - 72px)
+}
+
+.scale_image {
+    transition: 0.5s linear;
+    display: inline-block;
+    margin: 20px
+}
+
+.scale_image:hover {
+    transform: scale(1.1);
+    transition: 0.5s linear;
+    display: inline-block;
+}
+
+#txt_name {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    color: white;
+    font-size: 5em;
+}
+
+#txt_name > span {
+    color: #FFC700;
+}
+
+.txt_subject {
+    font-family: 'Do hyeon', sans-serif;
+    color: white;
+    font-size: 3em;
+}
+
+.txt_title {
+    font-family: 'Do hyeon', sans-serif;
+    color: white;
+    font-size: 2em;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.txt_subtitle {
+    font-family: 'Do hyeon', sans-serif;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.txt_normal {
+    font-family: 'Do hyeon', sans-serif;
+}
+
+.txt_nomargin {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+#me {
+    width: 120px;
+    border-radius: 20%;
+    border: 8px solid rgb(65, 65, 65);
+    margin-bottom: 32px;
+    /* border: 8px solid rgba(255, 255, 255, 0.7); */
+
+}
+
+#buttons_wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.hr {
+    background-color: gray;
+    width: 100%;
+    height: 1px;
+}
+
+.circle_button {
+    background-color: rgb(45, 45, 45);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.circle_button:hover{
+    background-color: #FFC700;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.normal_font {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.sideBar {
+    height: 100%;
+    width: 15rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(45, 45, 45);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'Jua', sans-serif;
+}
+
+@media (max-width: 992px) {
+    .sideBar {
+        display: none;
+    }
+}
+
+.mobile_sideBar {
+    display: none;
+}
+
+.mobile_sideBar p{
+    height: 50px;
+    line-height: 50px;
+    /* text-align: center; */
+    margin: 0;
+}
+
+.mobile_sideBar button {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid gray;
+}
+
+.mobile_sideBar > a {
+    height: 40px;
+}
+
+.mobile_sideBar #mobile_header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 16px;
+}
+
+@media (max-width: 992px) {
+    .mobile_sideBar {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: nowrasp; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        background-color:#363636;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        font-family: 'Jua', sans-serif;
+        overflow: hidden;
+    }
+}
+
+.sideBar > a {
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.5);
+    font-weight: 900;
+    margin: 8px;
+}
+
+.mobile_sideBar > a {
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.5);
+    font-weight: 900;
+    margin: 8px 16px;
+}
+
+.nav-active {
+    color: white
+!important;
+}
+
+.content {
+    padding-left: 15rem;
+    display: inline-block;
+    width: 100vw;
+    max-width:100%;
+    box-sizing: border-box;
+    background-color: #212121;
+}
+
+@media (max-width: 992px) {
+    .content {
+        padding-left: 0;
+    }
+}
+
+
+.main {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2em;
+    margin-top:3em
+}
+
+@media (max-width: 992px) {
+    .main {
+        margin-left: 16px;
+    }
+}
+
+.experience {
+    margin-left: 2em;
+    margin-top: 3em;
+}
+
+.experience > div {
+    margin-top: 2em;
+}
+
+@media (max-width: 992px) {
+    .experience {
+        margin-left: 16px;
+    }
+}
+
+.project {
+    margin-left: 2em;
+    margin-top: 3em;
+}
+
+.project > div {
+    margin-top: 2em;
+}
+
+@media (max-width: 992px) {
+    .project {
+        margin-left: 16px;
+    }
+}
+
+
+.title_with_date {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.title_with_date > span {
+    color:  #FFC700;
+    font-family: 'Jua', sans-serif;
+    margin-right: 30%;
+    margin-top: 30px;
+}
+
+.link_button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 0;
+    color: white;
+    margin-right: 30px;
+}
+
+.link_button {
+    background-color: rgb(45, 45, 45);
+    transition: 0.5s linear; /* vendorless fallback */
+    -o-transition: 0.5s linear; /* opera */
+    -ms-transition: 0.5s linear; /* IE 10 */
+    -moz-transition: 0.5s linear; /* Firefox */
+    -webkit-transition: 0.5s linear; /*safari and chrome */
+}
+
+.link_button span {
+    display: none;
+    font-family: "Do Hyeon";
+}
+.link_button:hover span{
+    display: inline-block;
+}
+
+.link_button:hover {
+    width: 100px;
+    transition: all 0.5s;
+    background-color: #FFC700;
+}

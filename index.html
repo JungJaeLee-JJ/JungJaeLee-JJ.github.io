@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+        <title>JUNG JAE</title>
+        <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Noto+Sans+KR:wght@400;700;900&family=Saira+Extra+Condensed:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./static/css/lightbox.min.css">
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+        <script type="text/javascript" src="./static/jquery.js"></script>
+        <script src="./static/js/lightbox-plus-jquery.min.js"></script>
+        <script type="text/javascript" src="./static/navigation.js"></script>
+    </head>
+    <body>
+        <div class="circle_button" style="position: fixed; bottom:16px; right:16px" onclick="move_nav('about')">
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </div>
+        <div id="scroller">
+            <div class="sideBar">
+                <img class="test" id="me" src="./assets/me.jpg" alt="프로필">
+                <a class="nav_about nav-active" href="#" onclick= "move_nav('about')" >ABOUT</a>
+                <a class="nav_experience" href="#" onclick= "move_nav('experience')">EXPERIENCE</a>
+                <a class="nav_project" href="#" onclick= "move_nav('project')">PROJECT</a>
+                <a class="nav_education" href="#" onclick= "move_nav('education')">EDUCATION</a>
+                <a class="nav_skills" href="#" onclick= "move_nav('skills')">SKILLS</a>
+                <a class="nav_awards" href="#" onclick= "move_nav('awards')">AWARDS</a>
+                <!-- <a class="nav_projects" href="#" onclick= "move_nav('projects')">PROJECTS</a> -->
+            </div>
+            <div class="mobile_sideBar">
+                <div id="mobile_header" style="height: 50px; min-height: 50px;">
+                    <span>JJ</span>
+                    <button id="mobile_hamburger" onclick="show_navbar()"><i class="fas fa-bars" style="color: rgba(255, 255, 255, 0.8);"></i></button>
+                </div>
+                <a href="#" onclick= "move_nav('about')" >ABOUT</a>
+                <a href="#" onclick= "move_nav('experience')">EXPERIENCE</a>
+                <a href="#" onclick= "move_nav('project')">PROJECT</a>
+                <a href="#" onclick= "move_nav('education')">EDUCATION</a>
+                <a href="#" onclick= "move_nav('skills')">SKILLS</a>
+                <a href="#" onclick= "move_nav('awards')">AWARDS</a>
+            </div>
+
+            <div class="content">
+                <div class="about main">
+                    <h1 id="txt_name">LEE <span>JUNG JAE</span></h1>
+                    <div>
+                        <span style="color: gray;"><i class="fas fa-birthday-cake"></i></span><span>  1997.09.14</span>
+                    </div>
+                    <div>
+                        <span style="color: gray;"><i class="fas fa-envelope"></i></span><span style="color:#FFC700"> wjd8637@naver.com</span>
+                    </div>
+                    <div class="normal_font">
+                        <h3>안녕하세요, <span>이정재</span> 입니다!</h3>
+                        <h3>저에 대해서 알고 싶으시다면 스크롤을 아래로 내려주세요 😄</h3>
+                    </div>
+                    <div id="buttons_wrapper">
+                        <div class="circle_button" onClick="window.open('https://www.instagram.com/jeongjae_ll/')">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </div>
+                        <div class="circle_button" onClick="window.open('https://github.com/JungJaeLee-JJ')">
+                            <i class="fab fa-github fa-lg"></i>
+                        </div>
+                        <div class="circle_button" onClick="window.open('https://blog.jjlovechoco.com/')">
+                            <img src="assets/tistory.png" style="color: white;" width="20px" />
+                        </div>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="experience">
+                    <h1 class="txt_subject">🧑🏻‍💻 EXPREIENCE</h1>
+                    <div class="a">
+                        <div class="title_with_date">
+                            <h2 class="txt_title">라인비즈플러스(주) </h2>
+                            <span>2021.06 ~ 재직중</span>
+                        </div>
+                        <h3 class="txt_subtitle">인턴 - Fintech Server 개발</h3>
+                        <h4>LINE PAY 팀에서 인턴으로 근무하고 있습니다.<br/>
+                            Spring Boot는 처음이라 열심히 배우는중 입니다.<br/>
+                            <!--                            그 외에도 Kafka, Redis, Spring Batch 등을 사용할 예정입니다. <br/>-->
+                        </h4>
+
+                        <p class="txt_normal">
+                            - Spring Boot, Mysql, JPA <br />
+                            - Kafka <br />
+                            - Spring Batch<br />
+                            - Redis<br />
+                            <br/>
+                        </p>
+                    </div>
+                    <div class="a">
+                        <div class="title_with_date">
+                            <h2 class="txt_title">셀러노트(주) </h2>
+                            <span>2021.01 ~ 2021.02</span>
+                        </div>
+                        <h3 class="txt_subtitle">인턴 - 개발팀</h3>
+                        <h4>한양대학교 창업지원단이 주관하는 스타트업 현장실습 프로그램의 일환으로 근무하였습니다.<br/>
+                            서비스가 해외로 확장됨에 따라 해외 문자 전송 기능이 필요하였고, 따라서<br/>
+                            ADMIN 서버에 있던 Notification 기능을 따로 분리하여 REST API로 개발하였습니다.<br/>
+                        </h4>
+
+                        <p class="txt_normal">
+                            실습 사진 (* 이미지를 클릭하시면, 크게 보실 수 있습니다.)
+                        </p>
+                        <div>
+                            <a href="./assets/selenote1.jpg" data-lightbox="stride-1" >
+                                <img class="scale_image" src="./assets/selenote1.jpg" height="300">
+                            </a>
+                        </div>
+
+                        <h4>Controller, Service, Model, View 등의 MVC 패턴으로 구현하였습니다. <br/>
+                            REST API를 설계할 때 URL과 METHOD를 고민하였습니다.<br/>
+                            처음으로 Unit Test 작성하는 좋은 경험이 되었습니다.<br/>
+                            테스트 픽스처, Mocking 등을 알게 되었습니다.<br/>
+                        </h4>
+
+                        <p class="txt_normal">
+                            - NodeJS(Express, Typescript) + Mysql(TypeORM) <br />
+                            - Unit Test : Jest, Supertest<br />
+                            - API Docs : Typescript-Rest-Swagger<br />
+                            - AWS SQS : 이메일 전송<br />
+                            - AWS SNS : 국내 문자 전송<br />
+                            - Twillio : 해외 문자 전송<br />
+                        </p>
+                    </div>
+                    <div id="justformargin" style="height: 30px;">
+                </div>
+                <div class="hr"></div>
+                <div class="project">
+                    <h1 class="txt_subject">‍🧗‍♀️ PROJECT</h1>
+                    <div class="a">
+                        <div class="title_with_date">
+                            <h2 class="txt_title">SW마에스트로 11기</h2>
+                            <span>2020.06 ~ 2020.11</span>
+                        </div>
+                        <h3 class="txt_subtitle">오손도손 (온라인 또래상담 솔루션)</h3>
+                        <h4>과학기술정보통신부, 정보통신기획평가원이 주관하는 SW 마에스트로 11기 과정에서<br/>
+                            한국청소년상담복지개발원과 MOU를 체결하고 프로젝트를 수행하였습니다.<br/>
+                            서버 개발 및 팀장을 담당하였습니다.<br/>
+                        </h4>
+                        <p class="txt_normal">
+                            - NodeJS(Socket.io) 서버 개발 : 메신저, WebRTC Signaling <br/>
+                            - Django 서버 개발 : Rest-API, JWT, Mysql, S3<br />
+                            - 서비스 배포 : AWS Beanstalk, AWS Code Pipeline, Route 53, RDS, S3
+                            - Turn 서버 구축 : coturn<br/>
+                            - 서비스 이관 : Naver Cloud platform, Nginx, CertBot
+                        <p>
+                        <h4>서울 소재의 동도중학교와 송도고등학교를 대상으로 시범운영을 실시하였습니다.<br/>
+                            시범운영 동안 73건의 또래상담매칭과 41건의 화상상담이 이루어졌습니다.<br/>
+                            81%의 서버스 만족도를 달성하였습니다. <br/>
+                        </h4>
+                        <p class="txt_normal">
+                            * 동도중학교 인터뷰 사진<br/>
+                            <a href="./assets/interview2.jpeg" data-lightbox="mutsa-1">
+                                <img class="scale_image" src="./assets/interview2.jpeg" height="300">
+                            </a>
+                            <a href="./assets/interview3.jpeg" data-lightbox="mutsa-1">
+                                <img class="scale_image" src="./assets/interview3.jpeg" height="300">
+                            </a>
+                            <a href="./assets/interview4.jpeg" data-lightbox="mutsa-1">
+                                <img class="scale_image" src="./assets/interview4.jpeg" height="300">
+                            </a>
+                        </p>
+                        <p class="txt_normal">
+                        * 현재 오손도손 서비스는 한국청소년상담복지개발원에 이관되어 고도화단계에 있습니다.
+                        </p>
+                        <div style="display: flex">
+                            <button class="link_button" onClick="window.open('https://osondoson.co.kr/')" style="width: 160px;height: 110px; background-image: url('assets/logo.png'); background-size : cover;, background-repeat : no-repeat;">
+                            </button>
+                            <p class="txt_normal">
+                                * 테스트 계정 <br/>
+                                - id : test1 <br/>
+                                - password : 1234 <br/>
+                                * 로고를 클릭하시면 오손도손 웹사이트로 이동합니다. <br/>
+                            </p>
+                        </div>
+                        <p class="txt_normal" style="margin-bottom: 0px">
+                            * 시상식영상 및 청소년상담복지개발원 기관장 표창장 <br/>
+                        </p>
+                        <div style="display: flex;justify-content: left;align-items: center">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/bgVbmaGcGus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                            <a href="./assets/osondoson.jpeg" data-lightbox="stride-1" >
+                                <img class="scale_image" src="./assets/osondoson.jpeg" height="315">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="a">
+                        <div class="title_with_date">
+                            <h2 class="txt_title">멋쟁이사자처럼 9기</h2>
+                            <span>2021.02 - 진행중</span>
+                        </div>
+                        <h3 class="txt_subtitle">한양대학교 운영진</h3>
+                        <h4>한양대학교 멋쟁이사자처럼 9기로 운영진으로 활동했습니다.
+                            <br /> Code Pipeline 과 Aws Beanstalk 을 활용한 간략한 CI/CD 환경 구축 세션 진행
+                            <br /> Aws Beanstalk 와 EC2 HTTPS 프로토콜 적용하기 세션 진행
+                            <br /> 해커톤에 참가하여 꾸욱( 카페 쿠폰 적립 서비스, React+Django) 프로젝트를 진행하고있습니다.
+                        </h4>
+                        <a href="./assets/mutsa.jpg" data-lightbox="mutsa-1">
+                            <img class="scale_image" src="./assets/mutsa.jpg" height="300">
+                        </a>
+                        <a href="./assets/kkukk.png" data-lightbox="mutsa-1">
+                            <img class="scale_image" src="./assets/kkukk.png" height="300">
+                        </a>
+                    </div>
+                    <div class="a">
+                        <div class="title_with_date">
+                            <h2 class="txt_title">한양대학교 SW창업경진대회 대상</h2>
+                            <span>2020.03 ~ 2020.06</span>
+                        </div>
+                        <h3 class="txt_subtitle">군 생활 관리 스마트 닥터 앱 (iOS, Django)</h3>
+                        <h4>2020 한양대학교 SW창업 경진대회에서 대상을 수상하였습니다. (26팀 참가, 1등)<br>
+                            팀에서 iOS Native 앱 개발 및 UI/UX를 담당하였습니다.
+                        </h4>
+                        <button class="link_button" onClick="window.open('https://projectintheclass.github.io/Dr.Soldier/index.html')">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Page</span>
+                        </button>
+                        <button class="link_button" onClick="window.open('http://www.newshyu.com/news/articleView.html?idxno=864945')">
+                            <i class="fas fa-newspaper"></i>
+                            <span>NEWS</span>
+                        </button>
+                        <div>
+                            <a href="./assets/drsoldier.jpg" data-lightbox="drsoldier-1">
+                                <img class="scale_image" src="./assets/drsoldier.jpg" height="400"/>
+                            </a>
+                            <a href="./assets/news_h.jpg" data-lightbox="drsoldier-1">
+                                <img class="scale_image" src="./assets/news_h.jpg" height="400"/>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="./assets/dr_info.png" data-lightbox="drsoldier-1">
+                                <img class="scale_image" src="./assets/dr_info.png" height="300"/>
+                            </a>
+                            <a href="./assets/dr_calendar.png" data-lightbox="drsoldier-1">
+                                <img class="scale_image" src="./assets/dr_calendar.png" height="300"/>
+                            </a>
+                            <a href="./assets/dr_community.png" data-lightbox="drsoldier-1">
+                                <img class="scale_image" src="./assets/dr_community.png" height="300"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="justformargin" style="height: 30px;">
+
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="education main">
+                    <h1 class="txt_subject">🏫 EDUCATION</h1>
+                    <br/><br/>
+                    <h1 class="txt_title">한양대학교</h1>
+                    <h2 class="txt_subtitle">Hanyang University</h2>
+                    <h4 class="txt_nomargin">2016 ~ 공과대학 컴퓨터소프트웨어학부</h4>
+                    <br/><br/>
+                    <h1 class="txt_title">홍성고등학교</h1>
+                    <h2 class="txt_subtitle">HongSeong High School</h2>
+                    <h4 class="txt_nomargin">2013 ~ 2015 이공계열</h4>
+                </div>
+                <div class="hr"></div>
+                <div class="skills main">
+                    <h1 class="txt_subject">🛠 SKILLS</h1>
+                    <div>
+                        <h2 class="txt_title" style="color: #FFC700">Programming Languages</h2>
+                        <h3 class="txt_normal">Java<br/>
+                        HTML, CSS, JavaScript<br/>
+                        TypeScript <br/>
+                        Python<br/>
+                        </h3>
+                    </div>
+                    <div>
+                        <h2 class="txt_title" style="color: #FFC700">Frameworks</h2>
+                        <h3 class="txt_normal">Spring Boot<br/>
+                        Express<br/>
+                        React<br/>
+                        Django<br/>
+                        </h3>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="awards main">
+                    <h1 class="txt_subject">🏆 AWARDS</h1>
+                    <div style="margin-left: 30px;">
+                        <h4 class="txt_normal">
+                            <i class="fas fa-trophy" style="color: rgb(246, 195, 68);"></i> 한국청소년상담복지개발원 기관장 표창<br/><br/>
+                            <i class="fas fa-trophy" style="color: rgb(246, 195, 68);"></i>  2020 한양대학교 프로그래밍 경진대회 우수상 <br/><br/>
+                            <i class="fas fa-trophy" style="color: rgb(246, 195, 68);"></i> 2020 한양대학교 SW창업경진대회 최우수상 <br/><br/>
+                        </h4>
+                    </div>
+                    <h1 class="txt_subject">🎖 CERT</h1>
+                    <div style="margin-left: 30px;">
+                        <h4 class="txt_normal">
+                            <i class="fas fa-check" style="color: rgb(83, 164, 81);"></i> OPIC IH<br/><br/>
+                            <i class="fas fa-check" style="color: rgb(83, 164, 81);"></i> OPIC 일본어 IH<br/><br/>
+                            <i class="fas fa-check" style="color: rgb(83, 164, 81);"></i> 정보처리기사<br/><br/>
+                            <i class="fas fa-check" style="color: rgb(83, 164, 81);"></i> 정보처리산업기사<br/><br/>
+                            <i class="fas fa-check" style="color: rgb(83, 164, 81);"></i> 한국사 검정능력시험 1급<br/><br/>
+                            <i class="fas fa-check" style="color: rgb(83, 164, 81);"></i> 리눅스 마스터 2급<br/><br/>
+                        </h4>
+                    </div>
+
+                </div>
+                <div class="hr"></div>
+                <!-- <div class="projects main">
+                    <h1 class="txt_subject">PROJECTS</h1>
+                </div> -->
+            </div>
+
+        </div>
+    </body>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyDS7nhJ3xmbqqlQbn0J4greTBNtLm2bj4w",
+        authDomain: "portofolio-9a758.firebaseapp.com",
+        projectId: "portofolio-9a758",
+        storageBucket: "portofolio-9a758.appspot.com",
+        messagingSenderId: "224836438963",
+        appId: "1:224836438963:web:612fafe6ae543735d799c6",
+        measurementId: "G-NWX4E06D8F"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+</html>
